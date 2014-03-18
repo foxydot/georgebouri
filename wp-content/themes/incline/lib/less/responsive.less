@@ -7,16 +7,10 @@ Media Queries
   only screen and (-o-min-device-pixel-ratio: 3/2),
   only screen and (min-device-pixel-ratio: 1.5) {
 
-  .header-image .site-header .wrap {
-    background: url(images/logo@2x.png) no-repeat left;
-    background-size: 320px 164px;
-  }
-
 }
 
 @media only screen and (max-width: 1139px) {
 
-  .site-inner,
   .wrap {
     max-width: 960px;
   }
@@ -27,9 +21,12 @@ Media Queries
     width: 740px;
   }
 
-  .content,
-  .site-header .widget-area {
+  .content {
     width: 620px;
+  }
+  
+  .site-header .widget-area {
+    width: 600px;
   }
 
   .sidebar-content-sidebar .content,
@@ -41,17 +38,25 @@ Media Queries
   .footer-widgets-1,
   .footer-widgets-2,
   .footer-widgets-3,
-  .sidebar-primary,
-  .title-area {
+  .sidebar-primary {
     width: 300px;
+  }
+
+  .footer-widgets-1 {
+    margin-right: 30px;
+    margin-right: 3rem;
   }
 
 }
 
 @media only screen and (max-width: 1023px) {
 
-  body {
-    background-color: #fff;
+  .wrap {
+    max-width: 768px;
+  }
+  
+  .home-top .wrap {
+    max-width: 750px;
   }
 
   .content,
@@ -67,36 +72,13 @@ Media Queries
   .sidebar-sidebar-content .content,
   .sidebar-sidebar-content .content-sidebar-wrap,
   .site-header .widget-area,
-  .site-inner,
-  .title-area,
-  .wrap {
+  .title-area {
     width: 100%;
   }
 
   .site-header .wrap {
-    padding: 20px 0;
-    padding: 2rem 0;
-  }
-
-  .header-image .site-header .wrap {
-    background-position: center top;
-  }
-
-  .site-inner {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
-  .archive-description,
-  .author-box,
-  .comment-respond,
-  .entry,
-  .entry-comments,
-  .entry-footer .entry-meta,
-  .header-image .site-header .widget-area,
-  .sidebar .widget,
-  .site-header {
-    padding: 0;
+    padding: 20px 5%;
+    padding: 2rem 5%;
   }
 
   .genesis-nav-menu li,
@@ -107,8 +89,9 @@ Media Queries
 
   .genesis-nav-menu,
   .site-description,
-  .site-header .title-area,
   .site-header .search-form,
+  .site-header .title-area,
+  .site-header .widget-area,
   .site-title {
     text-align: center;
   }
@@ -121,7 +104,7 @@ Media Queries
   }
 
   .site-header .search-form {
-    margin: 16px auto ;
+    margin: 16px auto;
     margin: 1.6rem auto;
   }
 
@@ -129,33 +112,44 @@ Media Queries
     display: none;
   }
 
-  .entry-footer .entry-meta {
-    margin: 0;
-    padding-top: 12px;
-    padding-top: 1.2rem;
-  }
-
-  .sidebar .widget.enews-widget {
-    padding: 40px;
-    padding: 4rem;
-  }
-
-  .site-footer {
-    padding: 24px 0;
-    padding: 2.4rem 0;
-  }
-
-  .footer-widgets {
-    padding: 40px 5% 16px;
-  }
-
   .footer-widgets-1 {
-    margin: 0;
+    margin-right: 0;
+  }
+  
+  .featured-content .alignnone {
+    display: block;
+    text-align: center;
+  }
+  
+  .home-top a.alignleft, 
+  .home-top a.alignright {
+    width: 100%;
+  }
+  
+  .home-top .featured-content .entry-header {
+    clear: both;
+    padding: 40px 40px 0;
+    padding: 4rem 4rem 0;
+  }
+  
+  .home-top .featured-content .entry-content {
+    padding: 0 40px 40px;
+    padding: 0 4rem 4rem;
   }
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+
+  .wrap {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .archive-pagination li a {
+    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
+  }
 
   .five-sixths,
   .four-sixths,
@@ -170,6 +164,28 @@ Media Queries
   .two-thirds {
     margin: 0;
     width: 100%;
+  }
+  
+  .home-top .more-link {
+    display: block;
+  }
+  
+  .home-bottom .widget {
+    margin: 0 0 40px;
+    margin: 0 0 4rem;
+    width: 100%;
+  }
+  
+  .header-image .site-title a {
+    background-size: contain !important;
+  }
+  
+  .responsive-menu {
+    display: none;
+  }
+  
+  #responsive-menu-icon {
+    display: block;
   }
 
 }

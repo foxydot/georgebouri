@@ -10,13 +10,16 @@ html {
 }
 
 body {
-  background-color: #f5f5f5;
-  color: #666;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
+  background-color: #fff;
+  color: #777;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   line-height: 1.625;
+}
+
+body > div {
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 a,
@@ -45,13 +48,8 @@ textarea:focus,
 }
 
 a {
-  color: #666;
+  color: #31b2ed;
   text-decoration: none;
-}
-
-a img {
-  margin-bottom: -4px;
-  margin-bottom: -0.4rem;
 }
 
 a:hover {
@@ -74,14 +72,18 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 blockquote,
 blockquote::before {
   color: #999;
 }
 
 blockquote {
-  margin: 40px 40px 24px;
-  margin: 4rem 4rem 2.4rem;
+  margin: 40px;
+  margin: 4rem;
 }
 
 blockquote::before {
@@ -93,11 +95,6 @@ blockquote::before {
   left: -20px;
   position: relative;
   top: -10px;
-}
-
-.entry-content code {
-  background-color: #333;
-  color: #ddd;
 }
 
 cite {
@@ -114,11 +111,11 @@ h4,
 h5,
 h6 {
   color: #333;
-  font-family: Lato, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 16px;
-  margin: 0 0 1.6rem;
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
 }
 
 h1 {
@@ -165,7 +162,11 @@ video,
 
 img {
   height: auto;
-  width: auto; /* IE8 */
+}
+
+.featured-content img,
+.gallery img {
+  width: auto;
 }
 
 /* Forms
@@ -175,12 +176,13 @@ input,
 select,
 textarea {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #ececec;
   border-radius: 3px;
-  box-shadow: 1px 1px 3px #eee inset;
-  color: #999;
-  font-size: 14px;
-  font-size: 1.4rem;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.06);
+  color: #aaa;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
   padding: 16px;
   padding: 1.6rem;
   width: 100%;
@@ -192,13 +194,21 @@ textarea:focus {
   outline: none;
 }
 
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+  width: auto;
+}
+
 ::-moz-placeholder {
-  color: #999;
+  color: #666;
   opacity: 1;
+  font-weight: 400;
 }
 
 ::-webkit-input-placeholder {
-  color: #999;
+  color: #666;
+  font-weight: 400;
 }
 
 button,
@@ -206,15 +216,17 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button,
-.entry-content .button {
-  background-color: #333;
+.home-top .more-link {
+  background-color: #31b2ed;
   border: none;
-  box-shadow: none;
+  border-radius: 3px;
   color: #fff;
   cursor: pointer;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
   padding: 16px 24px;
   padding: 1.6rem 2.4rem;
-  text-transform: uppercase;
   width: auto;
 }
 
@@ -223,16 +235,17 @@ input:hover[type="button"],
 input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
-.entry-content .button:hover {
-  background-color: #f15123;
+.home-top .more-link:hover {
+  background-color: #333;
+  color: #fff;
 }
 
-.entry-content .button:hover {
+.entry-content .button:hover,
+.footer-widgets .button {
   color: #fff;
 }
 
 .button {
-  border-radius: 3px;
   display: inline-block;
 }
 
@@ -257,18 +270,18 @@ tbody {
   border-bottom: 1px solid #ddd;
 }
 
-th,
-td {
-  text-align: left;
-}
-
+td,
 th {
-  font-weight: bold;
-  text-transform: uppercase;
+  text-align: left;
 }
 
 td {
   border-top: 1px solid #ddd;
   padding: 6px 0;
   padding: 0.6rem 0;
+}
+
+th {
+  font-weight: 700;
+  text-transform: uppercase;
 }

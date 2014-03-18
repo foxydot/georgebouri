@@ -7,31 +7,25 @@ Content Area
 
 .entry {
   background-color: #fff;
-  border-radius: 3px;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px #ececec;
+  padding: 40px;
+  padding: 4rem;
   margin-bottom: 40px;
   margin-bottom: 4rem;
-  padding: 40px 40px 24px;
-  padding: 4rem 4rem 2.4rem;
 }
 
-.entry-content a {
-  border-bottom: 1px solid #ddd;
-  color: #f15123;
-}
-
-.entry-content a:hover {
-  color: #333;
-}
-
-.entry-content .attachment a,
-.entry-content .gallery a {
-  border: none;
+.entry-header {
+  border-bottom: 1px solid #ececec;
+  margin: -40px -40px 40px;
+  margin: -4rem -4rem 4rem;
+  padding: 40px;
+  padding: 4rem;
 }
 
 .entry-content ol,
 .entry-content p,
-.entry-content ul,
-.quote-caption {
+.entry-content ul {
   margin-bottom: 26px;
   margin-bottom: 2.6rem;
 }
@@ -42,11 +36,11 @@ Content Area
   margin-left: 4rem;
 }
 
-.entry-content ol li {
+.entry-content ol > li {
   list-style-type: decimal;
 }
 
-.entry-content ul li {
+.entry-content ul > li {
   list-style-type: disc;
 }
 
@@ -55,31 +49,45 @@ Content Area
   margin-bottom: 0;
 }
 
-.entry-content .search-form {
-  width: 50%;
+.entry-content code {
+  background-color: #333;
+  color: #ddd;
 }
 
-.entry-meta {
-  color: #999;
+/* Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+  color: #aaa;
   font-size: 14px;
   font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .entry-meta a {
-  border-bottom: 1px solid #ddd;
+  font-weight: 700;
 }
 
 .entry-header .entry-meta {
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+  margin: 10px 0 0;
+  margin: 1rem 0 0;
+}
+
+.entry-footer {
+  margin-top: 22px;
+  margin-top: 2.2rem;
 }
 
 .entry-footer .entry-meta {
-  border-top: 2px solid #f5f5f5;
+  border-top: 1px solid #ececec;
   margin: 0 -40px;
   margin: 0 -4rem;
-  padding: 32px 40px 8px;
-  padding: 3.2rem 4rem 0.8rem;
+  padding: 40px 40px 0;
+  padding: 4rem 4rem 0;
+}
+
+.entry-tags {
+  float: right;
 }
 
 .entry-comments-link::before {
@@ -88,20 +96,59 @@ Content Area
   margin: 0 0.6rem 0 0.2rem;
 }
 
-.entry-categories,
-.entry-tags {
-  display: block;
+/* After Entry
+--------------------------------------------- */
+
+.after-entry {
+  background-color: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px #ececec;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+}
+
+.after-entry .widget {
+  margin: 0;
+  padding: 40px;
+  padding: 4rem;
+}
+
+.after-entry .widget-title {
+  border-top: 1px solid #ececec;
+  margin: -40px -40px 30px;
+  margin: -4rem -4rem 3rem;
+  padding: 30px 40px;
+  padding: 3rem 4rem;
+}
+
+.after-entry .widget:first-child .widget-title {
+  border-top: 0;
+}
+
+.after-entry .featured-content .entry:last-of-type,
+.after-entry .featured-content .more-from-category {
+  border-bottom: none;
+}
+
+.after-entry .featured-content .more-from-category {
+  padding: 20px 40px;
+  padding: 2rem 4rem;
+}
+
+.after-entry li {
+  list-style-type: none;
 }
 
 /* Pagination
 --------------------------------------------- */
 
-.archive-pagination,
-.entry-pagination {
-  font-size: 14px;
-  font-size: 1.4rem;
+.pagination {
   margin: 40px 0;
   margin: 4rem 0;
+}
+
+.adjacent-entry-pagination {
+  margin-bottom: 0;
 }
 
 .archive-pagination li {
@@ -109,9 +156,10 @@ Content Area
 }
 
 .archive-pagination li a {
-  background-color: #333;
-  border-radius: 3px;
-  color: #fff;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px #ececec;
+  color: #333;
   cursor: pointer;
   display: inline-block;
   padding: 8px 12px;
@@ -119,12 +167,14 @@ Content Area
 }
 
 .archive-pagination li a:hover,
-.archive-pagination li.active a {
-  background-color: #f15123;
+.archive-pagination .active a {
+  background-color: #31b2ed;
+  color: #fff;
 }
 
-.entry-pagination a {
-  border-bottom: 1px solid #ddd;
+.entry-pagination.pagination {
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
 }
 
 /* Comments
@@ -134,38 +184,60 @@ Content Area
 .entry-comments,
 .entry-pings {
   background-color: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px #ececec;
   margin-bottom: 40px;
   margin-bottom: 4rem;
 }
 
-.entry-comments {
-  padding: 40px;
-  padding: 4rem;
-}
-
-.comment-respond,
-.entry-pings {
+.comment-respond {
   padding: 40px 40px 16px;
   padding: 4rem 4rem 1.6rem;
 }
 
-.comment-respond a,
-.entry-comments a {
-  border-bottom: 1px solid #ddd;
+.comment-respond h3 {
+  border-bottom: 1px solid #ececec;
+  margin: -40px -40px 40px;
+  margin: -4rem -4rem 4rem;
+  padding: 30px 40px;
+  padding: 3rem 4rem;
+}
+
+.entry-comments {
+  border-bottom-width: 0;
+}
+
+.entry-comments h3,
+.entry-pings h3 {
+  border-bottom: 1px solid #ececec;
+  margin: 0;
+  padding: 30px 40px;
+  padding: 3rem 4rem;
+}
+
+.comment-list li.depth-1 {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 40px;
+  padding-bottom: 4rem;
 }
 
 .comment-content {
   clear: both;
 }
 
-.entry-comments .comment-author {
-  margin-bottom: 0;
+.comment-list li {
+  padding: 40px 40px 0;
+  padding: 4rem 4rem 0;
+}
+
+.comment-list li li {
+  padding-right: 0;
 }
 
 .comment-respond input[type="email"],
 .comment-respond input[type="text"],
 .comment-respond input[type="url"] {
-  width: 50%
+  width: 50%;
 }
 
 .comment-respond label {
@@ -174,45 +246,43 @@ Content Area
   margin-right: 1.2rem;
 }
 
-.comment-list li,
+.entry-comments .comment-author,
+.entry-comments .comment-author a {
+  color: #333;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.comment-meta,
+.comment-meta a {
+  color: #aaa;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.entry-comments .comment-author a:hover,
+.comment-meta a:hover {
+  color: #31b2ed;
+}
+
 .ping-list li {
-  list-style-type: none;
-}
-
-.comment-list li {
-  margin-top: 24px;
-  margin-top: 2.4rem;
-  padding: 32px;
-  padding: 3.2rem;
-}
-
-.comment-list li li {
-  margin-right: -32px;
-  margin-right: -3.2rem;
-}
-
-li.comment {
-  background-color: #f5f5f5;
-  border: 2px solid #fff;
-  border-right: none;
-}
-
-.comment .avatar {
-  margin: 0 16px 24px 0;
-  margin: 0 1.6rem 2.4rem 0;
+  padding: 40px 40px 16px;
+  padding: 4rem 4rem 1.6rem;
 }
 
 .entry-pings .reply {
   display: none;
 }
 
-.bypostauthor {
+.comment-reply-link {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
 }
 
 .form-allowed-tags {
   background-color: #f5f5f5;
-  font-size: 14px;
-  font-size: 1.4rem;
   padding: 24px;
   padding: 2.4rem;
 }
+

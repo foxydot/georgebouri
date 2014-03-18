@@ -1,15 +1,17 @@
+
 /*
 Common Classes
 ---------------------------------------------------------------------------------------------------- */
 
-/* WordPress
+/* Avatar
 --------------------------------------------- */
 
 .avatar {
   float: left;
 }
 
-.alignleft .avatar {
+.alignleft .avatar,
+.author-box .avatar {
   margin-right: 24px;
   margin-right: 2.4rem;
 }
@@ -19,70 +21,9 @@ Common Classes
   margin-left: 2.4rem;
 }
 
-.search-form input[type="submit"] {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.sticky {
-}
-
-img.centered,
-.aligncenter {
-  display: block;
-  margin: 0 auto 24px;
-  margin: 0 auto 2.4rem;
-}
-
-img.alignnone {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
-}
-
-.alignleft {
-  float: left;
-  text-align: left;
-}
-
-.alignright {
-  float: right;
-  text-align: right;
-}
-
-img.alignleft,
-.wp-caption.alignleft {
-  margin: 0 24px 24px 0;
-  margin: 0 2.4rem 2.4rem 0;
-}
-
-img.alignright,
-.wp-caption.alignright {
-  margin: 0 0 24px 24px;
-  margin: 0 0 2.4rem 2.4rem;
-}
-
-.wp-caption-text {
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.gallery-caption {
-}
-
-.widget_calendar table {
-  width: 100%;
-}
-
-.widget_calendar td,
-.widget_calendar th {
-  text-align: center;
+.comment .avatar {
+  margin: 0 16px 24px 0;
+  margin: 0 1.6rem 2.4rem 0;
 }
 
 /* Genesis
@@ -96,49 +37,68 @@ img.alignright,
 .archive-description,
 .author-box {
   background-color: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px #ececec;
   margin-bottom: 40px;
   margin-bottom: 4rem;
-}
-
-.archive-description {
-  padding: 40px 40px 24px;
-  padding: 4rem 4rem 2.4rem;
-}
-
-.author-box {
   padding: 40px;
   padding: 4rem;
 }
 
 .author-box-title {
   color: #333;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   margin-bottom: 4px;
   margin-bottom: 0.4rem;
 }
 
-.author-box a {
-  border-bottom: 1px solid #ddd;
-}
-
-.author-box p {
+.archive-description p:last-child,
+.author-box p:last-child {
   margin-bottom: 0;
 }
 
-.author-box .avatar {
-  margin-right: 24px;
-  margin-right: 2.4rem;
+/* Search Form
+--------------------------------------------- */
+
+.search-form {
+  overflow: hidden;
+}
+
+.site-header .search-form {
+  float: right;
+  margin-top: 8px;
+  margin-top: 0.8rem;
+}
+
+.entry-content .search-form,
+.site-header .search-form {
+  width: 50%;
+}
+
+.search-form input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* Titles
 --------------------------------------------- */
 
+.archive-title {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
 .entry-title {
-  font-size: 36px;
-  font-size: 3.6rem;
-  line-height: 1;
+  font-size: 30px;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .entry-title a,
@@ -147,24 +107,83 @@ img.alignright,
 }
 
 .entry-title a:hover {
-  color: #666;
+  color: #31b2ed;
 }
 
-.widget-title {
+.widget-title,
+.footer-widgets .featured-content .widget-title {
+  border-bottom: 1px solid #ececec;
   font-size: 16px;
   font-size: 1.6rem;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
-  text-transform: uppercase;
+  margin: 0 0 20px;
+  margin: 0 0 2rem;
+  padding: 0 0 20px;
+  padding: 0 0 2rem;
 }
 
-.sidebar .widget-title a {
-  border: none;
+.home-bottom .widget-title,
+.sidebar .widget-title {
+  margin: -40px -40px 40px;
+  margin: -4rem -4rem 4rem;
+  padding: 30px 40px;
+  padding: 3rem 4rem;
 }
 
-.archive-title {
-  font-size: 20px;
-  font-size: 2rem;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
+/* WordPress
+--------------------------------------------- */
+
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+.alignright {
+  float: right;
+  text-align: right;
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+  max-width: 100%;
+}
+
+a.alignnone {
+  display: inline-block;
+}
+
+img.centered,
+.aligncenter {
+  display: block;
+  margin: 0 auto 24px;
+  margin: 0 auto 2.4rem;
+}
+
+img.alignnone,
+.alignnone {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
+
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
+  margin: 0 24px 12px 0;
+  margin: 0 2.4rem 1.2rem 0;
+}
+
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
+  margin: 0 0 12px 24px;
+  margin: 0 0 1.2rem 2.4rem;
+}
+
+.wp-caption-text {
+  font-weight: 700;
+  text-align: center;
+}
+
+.entry-content p.wp-caption-text {
+  margin-bottom: 0;
 }

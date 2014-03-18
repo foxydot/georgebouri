@@ -2,10 +2,13 @@
 /** Start the engine */
 require_once( get_template_directory() . '/lib/init.php' );
 
+//* Set Localization (do not remove)
+load_child_theme_textdomain( 'enterprise', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'enterprise' ) );
+
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'MSDLAB Genesis Child Theme' );
-define( 'CHILD_THEME_URL', 'http://msdlab.com/' );
-define( 'CHILD_THEME_VERSION', '2.0.1' );
+define( 'CHILD_THEME_NAME', 'Incline' );
+define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/enterprise/' );
+define( 'CHILD_THEME_VERSION', '2.0.0' );
 
 /*
  * Pull in some stuff from other files
