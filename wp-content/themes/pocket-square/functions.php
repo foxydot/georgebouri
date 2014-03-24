@@ -6,7 +6,7 @@ require_once( get_template_directory() . '/lib/init.php' );
 load_child_theme_textdomain( 'enterprise', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'enterprise' ) );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Incline' );
+define( 'CHILD_THEME_NAME', 'Pocket Square' );
 define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/enterprise/' );
 define( 'CHILD_THEME_VERSION', '2.0.0' );
 
