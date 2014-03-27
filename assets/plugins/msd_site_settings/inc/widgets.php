@@ -18,12 +18,12 @@ class MSDConnected extends WP_Widget {
 		if ( !empty( $title ) ) { print $before_title.$title.$after_title; } 
         if ( trim($text) != ''){ print '<p>'.$text.'</p>'; }
 		?>
-		<?php do_shortcode('[msd-social]'); ?>
 	<div id="digits">
-		<?php print (get_option('msdsocial_phone')!='')?'PHONE: '.get_option('msdsocial_phone').'<br /> ':''; ?>
+		<?php print (get_option('msdsocial_phone')!='')?get_option('msdsocial_phone').'<br /> ':''; ?>
 		<?php print (get_option('msdsocial_fax')!='')?'FAX: '.get_option('msdsocial_fax').'<br /> ':''; ?>
-		<?php print (get_option('msdsocial_email')!='')?'<a href="mailto:'.get_option('msdsocial_email').'">'.strtoupper(get_option('msdsocial_email')).'</a><br /> ':''; ?>
+		<?php print (get_option('msdsocial_email')!='')?'Email: <a href="mailto:'.antispambot(get_option('msdsocial_email')).'">'.antispambot(get_option('msdsocial_email')).'</a><br /> ':''; ?>
 	</div>
+        <?php do_shortcode('[msd-social]'); ?>
 		<?php 	
 		echo $after_widget;
 	}
