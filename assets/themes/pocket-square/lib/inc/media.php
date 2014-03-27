@@ -2,7 +2,7 @@
 /**
  * Add new image sizes
  */
-add_image_size('sidebar-image', 270, 350, FALSE);
+add_image_size('sidebar-image', 240, 350, FALSE);
 
 /* Display a custom favicon */
 add_filter( 'genesis_pre_load_favicon', 'msdlab_favicon_filter' );
