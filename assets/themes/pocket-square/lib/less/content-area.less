@@ -8,7 +8,8 @@ Content Area
 .entry {
   background-color: #fff;
   border: 1px solid #ececec;
-  box-shadow: 0 1px #ececec;
+  -webkit-box-shadow: 4px 4px 4px 0 #DBDBDB;
+  box-shadow: 4px 4px 4px 0 #DBDBDB;
   padding: 40px;
   padding: 4rem;
   margin-bottom: 40px;
@@ -168,7 +169,7 @@ p.entry-meta {
 
 .archive-pagination li a:hover,
 .archive-pagination .active a {
-  background-color: #31b2ed;
+  background-color: @red;
   color: #fff;
 }
 
@@ -249,7 +250,7 @@ p.entry-meta {
 .entry-comments .comment-author,
 .entry-comments .comment-author a {
   color: #333;
-  font-family: 'Titillium Web', sans-serif;
+  .serif;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -263,7 +264,7 @@ p.entry-meta {
 
 .entry-comments .comment-author a:hover,
 .comment-meta a:hover {
-  color: #31b2ed;
+  color: @red;
 }
 
 .ping-list li {
@@ -276,7 +277,7 @@ p.entry-meta {
 }
 
 .comment-reply-link {
-  font-family: 'Titillium Web', sans-serif;
+  .serif;
   font-weight: 700;
 }
 

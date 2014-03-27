@@ -4,12 +4,15 @@ Site Header
 
 .site-header {
   background-color: #fff;
-  min-height: 150px;
+  min-height: 100px;
 }
 
 .site-header .wrap {
-  padding: 40px 0;
-  padding: 4rem 0;
+  padding: 10px 0;
+  padding: 1rem 0;
+}
+.site-header .wrap:after{
+  .clearfix;
 }
 
 /* Title Area
@@ -19,7 +22,7 @@ Site Header
   float: left;
   padding: 0 0 4px;
   padding: 0 0 0.4rem;
-  width: 320px;
+  width: 400px;
 }
 
 .header-full-width .title-area {
@@ -27,7 +30,7 @@ Site Header
 }
 
 .site-title {
-  font-family: 'Titillium Web', sans-serif;
+  .serif;
   font-size: 36px;
   font-size: 3.6rem;
   font-weight: 700;
@@ -36,19 +39,21 @@ Site Header
 
 .site-title a,
 .site-title a:hover {
-  color: #31b2ed;
+  color: @red;
 }
 
 .header-image .site-title > a {
-  background-position: top !important;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center left;
   float: left;
-  min-height: 80px;
+  min-height: 65px;
   width: 100%;
 }
 
 .site-description {
   color: #aaa;
-  font-family: 'Lato', sans-serif;
+  .serif;
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: 300;

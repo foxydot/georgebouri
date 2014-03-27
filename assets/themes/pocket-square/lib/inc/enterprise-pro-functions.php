@@ -27,12 +27,12 @@ add_image_size( 'featured-image', 358, 200, TRUE );
 add_image_size( 'home-top', 750, 600, TRUE );
 
 //* Add support for custom header
-add_theme_support( 'custom-header', array(
+/*add_theme_support( 'custom-header', array(
     'header-selector' => '.site-title a',
     'header-text'     => false,
     'height'          => 80,
     'width'           => 320,
-) );
+) );*/
 
 //* Add support for additional color style options
 add_theme_support( 'genesis-style-selector', array(

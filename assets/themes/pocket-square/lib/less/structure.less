@@ -24,6 +24,8 @@ Structure and Layout
   padding-top: 4rem;
 }
 
+.site-inner:after{.clearfix;}
+
 /* Column Widths and Positions
 --------------------------------------------- */
 
@@ -49,6 +51,8 @@ Structure and Layout
 .content {
   float: right;
   width: 740px;
+  width: percentage((9 / 12));
+  padding: 0 15px 0 0;
 }
 
 .content-sidebar .content,
@@ -72,6 +76,9 @@ Structure and Layout
 .sidebar-primary {
   float: right;
   width: 360px;
+  width: percentage((3 / 12));
+    padding: 0 0 0 15px;
+
 }
 
 .sidebar-content .sidebar-primary,

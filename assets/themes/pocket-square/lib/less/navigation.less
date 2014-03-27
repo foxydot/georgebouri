@@ -4,9 +4,9 @@ Site Navigation
 
 .genesis-nav-menu {
   clear: both;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 14px;
-  font-size: 1.4rem;
+  .serif;
+  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.5;
   width: 100%;
 }
@@ -22,15 +22,15 @@ Site Navigation
 
 .genesis-nav-menu a {
   display: block;
-  padding: 20px 24px;
-  padding: 2rem 2.4rem;
+  padding: 6px 24px;
+  padding: 0.6rem 2.4rem;
 }
 
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu a:hover,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #31b2ed;
+  color: @red;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -118,11 +118,31 @@ Site Navigation
 
 .nav-primary {
   background-color: #333;
+  ul.menu{
+    >li{
+      padding: 0 2.4rem;
+      >a{
+        padding: 0.6rem 0;
+        border-bottom: 4px solid transparent;
+      }
+    }
+    >li.separator{
+      padding: 0.6rem 0;
+    }
+    >li:hover,
+    >li.current-menu-item{
+      a{
+        color: @white;
+        border-bottom: 4px solid @red;
+      }
+    }
+  }
 }
 
 .nav-primary,
 .nav-primary a {
   color: #fff;
+  font-weight: 400;
 }
 
 .nav-primary .sub-menu {
