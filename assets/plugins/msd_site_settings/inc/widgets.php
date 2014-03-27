@@ -16,10 +16,9 @@ class MSDConnected extends WP_Widget {
 		$text = apply_filters( 'widget_text', empty( $instance['text'] ) ? '' : $instance['text'], $instance );
 		echo $before_widget;
 		if ( !empty( $title ) ) { print $before_title.$title.$after_title; } 
+        if ( trim($text) != ''){ print '<p>'.$text.'</p>'; }
 		?>
-		<p><?php echo $text; ?></p>
 		<?php do_shortcode('[msd-social]'); ?>
-	<div class="clear"></div>
 	<div id="digits">
 		<?php print (get_option('msdsocial_phone')!='')?'PHONE: '.get_option('msdsocial_phone').'<br /> ':''; ?>
 		<?php print (get_option('msdsocial_fax')!='')?'FAX: '.get_option('msdsocial_fax').'<br /> ':''; ?>
