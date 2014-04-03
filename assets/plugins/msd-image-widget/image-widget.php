@@ -236,7 +236,6 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * @return string image html
 	 */
 	private function get_image_html( $instance, $include_link = true ) {
-
 		// Backwards compatible image display.
 		if ( $instance['attachment_id'] == 0 && $instance['image'] > 0 ) {
 			$instance['attachment_id'] = $instance['image'];
@@ -284,10 +283,10 @@ class Tribe_Image_Widget extends WP_Widget {
 			$attr['class'] = 'attachment-'.$size;
 		}
 		$attr['style'] = '';
-		if (!empty($instance['width'])) {
+		if (!empty($instance['maxwidth'])) {
 			$attr['style'] .= "max-width: {$instance['width']}px;";
 		}
-		if (!empty($instance['height'])) {
+		if (!empty($instance['maxheight'])) {
 			$attr['style'] .= "max-height: {$instance['height']}px;";
 		}
 		if (!empty($instance['align']) && $instance['align'] != 'none') {

@@ -9,7 +9,11 @@ if ( !defined('ABSPATH') )
 	die('-1');
 
 echo $before_widget;
-
+if(is_front_page()){
+    $instance['maxwidth']='';
+    $instance['maxheight']='';
+    //ts_data($instance);
+}
 if ( !empty( $title ) ) { echo $before_title . $title . $after_title; }
 echo '<div class="widget-content">';
 echo $this->get_image_html( $instance, true );
