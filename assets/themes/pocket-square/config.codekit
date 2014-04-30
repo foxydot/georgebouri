@@ -704,17 +704,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/lib\/img\/logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9737,
-		"inputAbbreviatedPath": "\/lib\/img\/logo.png",
-		"outputAbbreviatedPath": "\/lib\/img\/logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/lib\/img\/logo@2x.png": {
 		"fileType": 32768,
 		"ignore": 0,
