@@ -185,42 +185,6 @@ input[type="search"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* Float Clearing
---------------------------------------------- 
-
-.archive-pagination:before,
-.clearfix:before,
-.entry:before,
-.entry-pagination:before,
-.footer-widgets:before,
-.nav-primary:before,
-.nav-secondary:before,
-.site-container:before,
-.site-footer:before,
-.site-header:before,
-.site-inner:before,
-.wrap:before {
-  content: " ";
-  display: table;
-}
-
-.archive-pagination:after,
-.clearfix:after,
-.entry:after,
-.entry-pagination:after,
-.footer-widgets:after,
-.nav-primary:after,
-.nav-secondary:after,
-.site-container:after,
-.site-footer:after,
-.site-header:after,
-.site-inner:after,
-.wrap:after {
-  clear: both;
-  content: " ";
-  display: table;
-}
-*/
 /* Import Fonts
 ------------------------------------------------------------ */
 /* Font Stacks */
@@ -1738,6 +1702,7 @@ Theme Colors
 }
 .msd-connected {
   padding-top: 2rem;
+  float: right;
 }
 .msd-connected .social-media a {
   display: inline-block;
@@ -1745,6 +1710,7 @@ Theme Colors
   width: 30px;
   color: #999999;
   font-size: 2.4rem;
+  background: transparent;
 }
 .header-widget-area .msd-connected #digits {
   display: none;
